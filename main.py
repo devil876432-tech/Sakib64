@@ -23,7 +23,8 @@ except Exception as e:
     print(f"Google Sheets Connection Error: {e}")
 
 # ২. বটের কনফিগারেশন ও ডাটা (Bot Configuration)
-BOT_TOKEN = "YOUR_BOT_TOKEN" # আপনার টেলিগ্রাম বট টোকেন বসাবেন
+BOT_TOKEN = BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+# আপনার টেলিগ্রাম বট টোকেন বসাবেন
 REQUIRED_GROUP_ID = "@your_group_username" # আপনার টেলিগ্রাম গ্রুপ/চ্যানেল
 
 RATE_FACEBOOK = 4.0 # ফেসবুক কাজের রেট (টাকা)
